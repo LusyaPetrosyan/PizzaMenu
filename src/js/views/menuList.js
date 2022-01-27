@@ -1,6 +1,6 @@
 import {menuListEventListeners} from "../helpers/eventListeners"
 export const renderMenuList = () => {
-    const wrapper = `<div class="menuList-container"><button class="btnIcon"><i class="fas fa-align-justify"></i></button>
+    const wrapper = `<div class="menuList-container">
 
  <div class="yashik">
         <div class="cube food" > 
