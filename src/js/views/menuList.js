@@ -23,7 +23,7 @@ export const renderMenuList = () => {
               <p> Ըմպելիք </p>
             </div>
         </div>
-        <div class="cube"> 
+        <div class="cube pizza"> 
             <div class="cubeText"> 
               <p> Պիցցաներ </p>
             </div>
@@ -36,14 +36,4 @@ export const renderMenuList = () => {
     </div>`
     document.querySelector(".container1").innerHTML = wrapper;
     menuListEventListeners();
-
-// function openHidelogin() {
-//     let menyuHidden = document.querySelector(".btnIcon");
-//     const newLocal = menyuHidden.style.display;
-//     if (newLocal === '' || newLocal === 'none') {
-//         newLocal = 'block';
-//     } else {
-//         newLocal= 'none';
-//     };
-// };
  }

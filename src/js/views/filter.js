@@ -59,3 +59,4 @@ export const renderFilterPage = () => {
   </div>`;
   document.querySelector(".container1").innerHTML = filter;
 };
+

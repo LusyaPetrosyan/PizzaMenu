@@ -13,10 +13,11 @@ export const renderFirstPage = () => {
                 <option value="8">8</option>
                 <option value="9">9</option>
             </select><br>
-            <button id="btn-green" class="btn-green">Ամրագրել</button>
+            <button id="btn-green" class="btn-green btn-register">Ամրագրել</button>
             </div>
             </div>`
-    document.querySelector(".container1").innerHTML += wrapper;
-    registerEventListeners();
+    document.querySelector(".container1").innerHTML = wrapper;
+    document.querySelector(".container1").style.backgroundImage = "url('./image/firstPage.jpg')";
+     registerEventListeners();
 }
-// style="background-image: url(./image/connect_to_table.jpg)" sra backgroundna chem karum dnem chi linum
+

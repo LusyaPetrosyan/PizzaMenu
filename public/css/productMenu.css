@@ -46,10 +46,7 @@
   font-size: 25px;
   margin-top: 30px;
 }
-.fut {
-  margin-top: 70px;
-  display: flex;
-}
+
 .btn-green {
   background-color: #006400;
   border: none;
@@ -62,7 +59,13 @@
   border-radius: 12px;
   justify-content: flex-end;
   font-weight: 550;
-  color: #000;
+}
+
+.add{
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 18px;
 }
 /* fistMenuSetup css */
 #table {

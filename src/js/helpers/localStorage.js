@@ -1,12 +1,8 @@
-// ogtagorcel cookie
-//sexani hamar @ntreluejic amragrelu knopkan sexmelu javascriptmanak petq e vercni sexani HTMLParagraphElementev da pahum enq quqii mej
-
 export const setCookie =(name, value, expDate = 30) => {
     let date = new Date ();
     let time = date.getTime() + expDate * 24 * 60 * 60 * 1000;
     document.cookie = `${name} = ${value} ; expires = ${new Date(time)}`;
 }
-
 
 export const getCookie =(name) => {    
     console.log("tableName")
