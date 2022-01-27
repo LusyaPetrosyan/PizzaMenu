@@ -1,99 +1,117 @@
-
-  #text{
-    color:aliceblue;
-  }
-  .text{
-    margin-top: 100px;
-    margin-left: 700px;
-    margin-bottom: 100px;
-    letter-spacing: 2px;
-    font-size: 25px;
-  }
-  .main{
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    margin-left: 200px;
-    margin-right: 500px;
-  }
-  .pizzaMain{
-    flex-direction: column;
-  }
-  .pizzaGin{
-    letter-spacing: 2px;
-    font-size: 25px;
-    margin-top: 30px;
-    margin-left: 100px;
-  }
-  .ingr{
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
-  .ingText{
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-    font-size: 20px;
-  }
-  .whatIn{
-    letter-spacing: 2px;
-    font-size: 25px;
-  }
-  .count{
-    margin-top: 30px;
-    letter-spacing: 2px;
-    font-size: 25px;
-    margin-top: 30px;
-  }
-  .fut{
-    margin-top: 70px;
-    display: flex;
-  }
-  .btn-green{
-    background-color: #006400; 
-    border: none;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    justify-content: flex-end;
-    font-weight: 550;
-    color: #000;
-  }
-/* fistMenuSetup css */
-  #table{
-   
-    width: 300px;
-    height: 40px;
-    background-color: #FFCF3E;
-    border-radius: 30px;
-    font-size:larger;
-    font-weight:bold;
-    text-align: center;
-    
+#text {
+  color: aliceblue;
+}
+.text {
+  letter-spacing: 2px;
+  font-size: 25px;
 }
 
-.tableBack{
-   display: flex;
-   align-items: center;
-   /* background-image: url(../image/connect_to_table.jpg); */
-   /* width: 100%;
+.product-title {
+  right: 20px;
+}
+
+.main {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  margin-left: 200px;
+  margin-right: 500px;
+}
+.pizzaMain {
+  flex-direction: column;
+}
+.pizzaGin {
+  letter-spacing: 2px;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+.ingr {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.ingText {
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+.whatIn {
+  letter-spacing: 2px;
+  font-size: 25px;
+}
+.count {
+  margin-top: 30px;
+  letter-spacing: 2px;
+  font-size: 25px;
+  margin-top: 30px;
+}
+.fut {
+  margin-top: 70px;
+  display: flex;
+}
+.btn-green {
+  background-color: #006400;
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  justify-content: flex-end;
+  font-weight: 550;
+  color: #000;
+}
+/* fistMenuSetup css */
+#table {
+  width: 300px;
+  height: 40px;
+  background-color: #ffcf3e;
+  border-radius: 30px;
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tableBack {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* background-image: url(../image/connect_to_table.jpg); */
+  /* width: 100%;
    height: 100vh; */
 }
 
-.table-child{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   margin-left: 200%;
+.table-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-    
-/* fistMenuSetup css */
+.menuList-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.header-row {
+  height: 60px;
+  position: absolute;
+}
+
+.header-row .btnIcon {
+  width: 50px;
+  height: 50px;
+  right: 0px;
+}
+/* fistMenuSetup css */ ;
 
   
   
