@@ -14,11 +14,9 @@ router.addRoute("/menu", function () {
   renderMenuList();
 });
 
-router.addRoute("/menu/:product", function () {
-//
+router.addRoute("/menu/:product", function (event) {
+  console.log("params=",event.params)
+  renderMenuPage();
 });
 
-router.addRoute("/menu/pizza", function () {
-  renderMenuPage();
-  });
 export default router;

@@ -20,12 +20,16 @@ export const registerEventListeners = () => {
         
 }
 export const menuListEventListeners = () => {
-    document.querySelector('.pizza').addEventListener("click", function(){
-        console.log("worked")
-        router.redirect("/menu/pizza");
-    })
+    document.querySelectorAll('.cube').forEach(function(cube){
+        cube.addEventListener("click", function(event){
+            console.log("worked");
+            console.log(event);
+            console.log(this);
+            console.log(this.id);
+            router.redirect(`/menu/${this.id}`);
+        })
+    } )
 }
-
     export const productMenuEventListeners = () =>{
         document.querySelector('.ingr').addEventListener("click", function(){
             renderProductMenuPage();
