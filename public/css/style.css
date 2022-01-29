@@ -10,12 +10,53 @@
     background-image: url("../image/filter.jpg");
     background-size: 100% 100%;
   }
+  .container2 {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../image/firstPage.jpg");
+    background-size: 100% 100%;
+  }
+  .sidenav {
+    height: 30%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
   .pizza {
     flex-direction: column;
   }
-  .icon {
+  /* .icon {
     justify-content: flex-end;
-  }
+  } */
   .main {
     display: flex;
     flex-direction: row;
@@ -54,8 +95,9 @@
     display: flex;
     flex-direction: row;
   
-    justify-content: space-around;
+    justify-content: space-around; 
     align-self: center;
+
     gap: 90px;
   }
   
@@ -125,7 +167,7 @@
   
   
   /* filtri css */
-  #menu__toggle {
+  /* #menu__toggle {
     opacity: 0;
   }
   
@@ -188,7 +230,7 @@
       top: 8px;
   } */
   
-  .menu__box {
+  /* .menu__box {
     display: block;
     position: fixed;
     top: 0;
@@ -202,10 +244,10 @@
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transition-duration: 0.25s;
   }
-  
+   */
   /*search div skizb*/
   
-  .filterWindowName {
+  /* .filterWindowName {
     margin-top: -410px;
   }
   
@@ -231,11 +273,11 @@
   
   .fa-search {
     font-size: 20px;
-  }
+  } */
   
   /*search div verj*/
   
-  .menu__item {
+  /* .menu__item {
     display: block;
     padding: 12px 24px;
     color: #333;
@@ -248,5 +290,5 @@
   
   .menu__item:hover {
     background-color: #cfd8dc;
-  }
+  } */ 
   /* filtr verj */

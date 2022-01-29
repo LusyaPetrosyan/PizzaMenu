@@ -3,6 +3,7 @@ export const renderProductMenuPage = () => {
     <h1>Պեպերոնի</h1>
 </div>
 <div class="main">
+
     <div class="pizzaMain">
         <div class="pizzaImage">
         <img class="imgPizza" src="./image/pizza2.png" alt=""></div>
@@ -12,7 +13,7 @@ export const renderProductMenuPage = () => {
     </div>
     <div class="ingr">
         <div id="text" class="ingText">
-            <h2>Բաղադրություն</h2>
+            <p>Բաղադրություն</p>
         </div>
         <div id="text" class="whatIn">
             Պանիր +/- <br>
@@ -23,6 +24,7 @@ export const renderProductMenuPage = () => {
             Կտոր +/- 
         </div>
     </div>
+    
 </div>
  <div class="add"><button class="btn-green" id="text">Ավելացնել զամբյուղ</button></div>`
       document.querySelector(".container1").innerHTML = product;

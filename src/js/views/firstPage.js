@@ -17,7 +17,8 @@ export const renderFirstPage = () => {
             </div>
             </div>`
     document.querySelector(".container1").innerHTML = wrapper;
-    document.querySelector(".container1").style.backgroundImage = "url('./image/firstPage.jpg')";
+     document.querySelector(".container1").style.backgroundImage = "url('./image/firstPage.jpg')";
      registerEventListeners();
 }
 
+//uzum em kpcnem container2-in

@@ -23,7 +23,7 @@ export const renderMenuList = () => {
               <p> Ըմպելիք </p>
             </div>
         </div>
-        <div id="pizza" class="cube pizza"> 
+        <div id="pizza" class="cube"> 
             <div class="cubeText"> 
               <p> Պիցցաներ </p>
             </div>
