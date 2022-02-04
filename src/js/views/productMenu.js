@@ -1,6 +1,8 @@
 import { productMenuPageEventListeners } from "../helpers/eventListeners";
 import {humburgerEventListener} from "../helpers/eventListeners";
-export const renderProductMenuPage = () => {
+export const renderProductMenuPage = (params) => {
+    
+   
     const product = `<div id="text" class="text">
     <h1>Պեպերոնի</h1>
 </div>
@@ -30,6 +32,8 @@ export const renderProductMenuPage = () => {
 </div>
  <div class="add"><button class="btn-green addBasket" id="text">Ավելացնել զամբյուղ</button></div>`
       document.querySelector(".container1").innerHTML = product;
+    //   fetch(`${CONSTANTS.HOST}/product?url=get-by-id&product_id=params.item`)//
+    //   .then
       productMenuPageEventListeners();
       humburgerEventListener();
     }

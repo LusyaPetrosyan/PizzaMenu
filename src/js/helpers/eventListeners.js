@@ -32,15 +32,15 @@ export const menuListEventListeners = () => {
     } )
 };
 
-    export const productMenuEventListeners = () =>{
+    export const productMenuEventListeners = (id) =>{
         document.querySelectorAll('.card').forEach(item => item.addEventListener("click", function(){
            let hash = window.location.hash;
             router.redirect(`${hash}/${this.id}`);
         }))
 
-        document.querySelector('.ingr').addEventListener("click", function(){
-            renderProductMenuPage();            
-        })
+        // document.querySelector('.ingr').addEventListener("click", function(){
+        //     renderProductMenuPage();            
+        // })
         document.querySelector('.dropbtn').addEventListener("click",function(){
             toggleFilter();
             

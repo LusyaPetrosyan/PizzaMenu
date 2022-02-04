@@ -19,14 +19,14 @@ router.addRoute("/menu", function () {
 
 router.addRoute("/menu/:product", function (event) {
   console.log("params=",event.params)
-  renderMenuPage();
+  renderMenuPage(event.params.product);
   });
 
 
 router.addRoute("/menu/:product/:item", function (event) {
   console.log("params=",event.params)
-  renderMenuPage(); 
-  renderProductMenuPage();  
+  // renderMenuPage(); 
+  renderProductMenuPage(event.params);  
 });
 router.addRoute("/basket", function () {
   renderBasketPage();
