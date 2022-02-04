@@ -1,34 +1,34 @@
 import {menuListEventListeners} from "../helpers/eventListeners"
 export const renderMenuList = () => {
-    const wrapper = `<div class="menuList-container"><button class="btnIcon"><i class="fas fa-align-justify"></i></button>
+    const wrapper = `<div class="menuList-container">
 
  <div class="yashik">
-        <div class="cube food" > 
+        <div id="hot_dishes" class="cube food" > 
            <div class="cubeText">
                  <p>Տաք Ուտեստ</p> 
             </div>         
         </div>
-        <div class="cube">
+        <div id="snacks" class="cube">
             <div class="cubeText" > 
                 <p> Խորտիկներ  </p>
             </div>
         </div>
-        <div class="cube">
+        <div id="cace" class="cube">
            <div class="cubeText"> 
                <p>Քաղցրավենիք</p>
             </div>
         </div>
-        <div class="cube"> 
+        <div id="drink" class="cube"> 
            <div class="cubeText">
               <p> Ըմպելիք </p>
             </div>
         </div>
-        <div class="cube"> 
+        <div id="pizza" class="cube"> 
             <div class="cubeText"> 
               <p> Պիցցաներ </p>
             </div>
         </div>
-        <div class="cube"> 
+        <div id="salads" class="cube"> 
             <div class="cubeText"> 
                <p> Աղցաններ </p> 
             </div>
@@ -36,14 +36,4 @@ export const renderMenuList = () => {
     </div>`
     document.querySelector(".container1").innerHTML = wrapper;
     menuListEventListeners();
-
-// function openHidelogin() {
-//     let menyuHidden = document.querySelector(".btnIcon");
-//     const newLocal = menyuHidden.style.display;
-//     if (newLocal === '' || newLocal === 'none') {
-//         newLocal = 'block';
-//     } else {
-//         newLocal= 'none';
-//     };
-// };
  }

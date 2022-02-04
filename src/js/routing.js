@@ -1,15 +1,22 @@
 import Router from "./lib/router.js";
-
+import { renderFirstPage } from "./views/firstPage.js";
+import {renderMenuList } from "./views/menuList";
+import {renderMenuPage } from "./views/menu";
+import {renderHeaderPage} from "./views/header"
 let router = new Router();
 
-router.addRoute("/", function () {});
-
-router.addRoute("/menu", function () {
-  alert("render menu page here");
+router.addRoute("/", function () {
+  renderFirstPage();
 });
 
-router.addRoute("/menu/:product", function () {
-  // ...
+router.addRoute("/menu", function () {
+  renderHeaderPage();
+  renderMenuList();
+});
+
+router.addRoute("/menu/:product", function (event) {
+  console.log("params=",event.params)
+  renderMenuPage();
 });
 
 export default router;

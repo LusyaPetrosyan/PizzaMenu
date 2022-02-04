@@ -4,9 +4,10 @@ export const renderFirstPage = () => {
     <select name="" id="table">   
                 <option hidden>Ընտրել Սեղանը</option>              
             </select><br>
-            <button id="btn-green" class="btn-green">Ամրագրել</button>
+            <button id="btn-green" class="btn-green btn-register">Ամրագրել</button>
             </div>
             </div>`
+
     document.querySelector(".container1").innerHTML += wrapper;
     fetch("http://localhost:8080/table?url=get-all")
     .then(function(response){
@@ -23,5 +24,7 @@ export const renderFirstPage = () => {
     })
   
     registerEventListeners();
+
 }
-// style="background-image: url(./image/connect_to_table.jpg)" sra backgroundna chem karum dnem chi linum
+
+//uzum em kpcnem container2-in
