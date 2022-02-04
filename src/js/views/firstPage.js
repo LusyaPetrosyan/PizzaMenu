@@ -13,21 +13,15 @@ export const renderFirstPage = () => {
         return response.json()
     })
     .then(function(data){
-        console.log("then 1:",data);
-        data.reduce
-       
+        console.log("then 1:",data[0].id);
+
+       let x =  data.reduce(function(prValue,elem){
+           return prValue +=  `<option value="${elem.id}">${elem.number}</option>`;
+        }, "") 
+        //   console.log("x");
+          document.getElementById("table").insertAdjacentHTML("beforeend", x);
     })
   
     registerEventListeners();
 }
 // style="background-image: url(./image/connect_to_table.jpg)" sra backgroundna chem karum dnem chi linum
-
-/* <option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option> */
