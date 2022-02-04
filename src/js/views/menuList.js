@@ -1,4 +1,5 @@
-import {menuListEventListeners} from "../helpers/eventListeners"
+import {menuListEventListeners} from "../helpers/eventListeners";
+import {humburgerEventListener} from "../helpers/eventListeners";
 export const renderMenuList = () => {
     const wrapper = `<div class="menuList-container">
 
@@ -36,4 +37,5 @@ export const renderMenuList = () => {
     </div>`
     document.querySelector(".container1").innerHTML = wrapper;
     menuListEventListeners();
+    humburgerEventListener();
  }

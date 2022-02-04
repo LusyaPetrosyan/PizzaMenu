@@ -21,3 +21,8 @@ export const getCookie =(name) => {
         return "";      
 }
 
+export const  deleteCookie=(name) => {
+  setCookie(name, "", {
+    'max-age': -1
+  })
+}

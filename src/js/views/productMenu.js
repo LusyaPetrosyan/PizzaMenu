@@ -1,3 +1,5 @@
+import { productMenuPageEventListeners } from "../helpers/eventListeners";
+import {humburgerEventListener} from "../helpers/eventListeners";
 export const renderProductMenuPage = () => {
     const product = `<div id="text" class="text">
     <h1>Պեպերոնի</h1>
@@ -26,6 +28,8 @@ export const renderProductMenuPage = () => {
     </div>
     
 </div>
- <div class="add"><button class="btn-green" id="text">Ավելացնել զամբյուղ</button></div>`
+ <div class="add"><button class="btn-green addBasket" id="text">Ավելացնել զամբյուղ</button></div>`
       document.querySelector(".container1").innerHTML = product;
+      productMenuPageEventListeners();
+      humburgerEventListener();
     }

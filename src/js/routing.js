@@ -2,7 +2,10 @@ import Router from "./lib/router.js";
 import { renderFirstPage } from "./views/firstPage.js";
 import {renderMenuList } from "./views/menuList";
 import {renderMenuPage } from "./views/menu";
-import {renderHeaderPage} from "./views/header"
+import {renderHeaderPage} from "./views/header";
+import {renderProductMenuPage} from "./views/productMenu";
+import {renderBasketPage} from "./views/basket";
+
 let router = new Router();
 
 router.addRoute("/", function () {
@@ -17,6 +20,15 @@ router.addRoute("/menu", function () {
 router.addRoute("/menu/:product", function (event) {
   console.log("params=",event.params)
   renderMenuPage();
-});
+  });
 
+
+router.addRoute("/menu/:product/:item", function (event) {
+  console.log("params=",event.params)
+  renderMenuPage(); 
+  renderProductMenuPage();  
+});
+router.addRoute("/basket", function () {
+  renderBasketPage();
+});
 export default router;

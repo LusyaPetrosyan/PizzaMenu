@@ -1,3 +1,4 @@
+import {humburgerEventListener} from "../helpers/eventListeners";
 export const renderBasketPage = () => {
     const wrapper = `<div class="coner">
   
@@ -29,4 +30,5 @@ export const renderBasketPage = () => {
     <button class="btn btn-green " >Հ ա ս տ ա տ ե լ</button>
 </div>`
     document.querySelector(".container1").innerHTML = wrapper;
+    humburgerEventListener();
 }

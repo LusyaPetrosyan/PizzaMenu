@@ -1,4 +1,5 @@
 import { registerEventListeners } from "../helpers/eventListeners";
+
 export const renderFirstPage = () => {
     const wrapper = `<div  class="tableBack"><div class="table-child"> 
     <select name="" id="table">   

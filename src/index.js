@@ -1,6 +1,7 @@
 import router from "./js/routing";
 import {getCookie, setCookie} from "./js/helpers/localStorage";
 
+
 const hash = window.location.hash;
 if (getCookie("table") != ""){
    let hashString = (hash.indexOf("#") >=0 &&

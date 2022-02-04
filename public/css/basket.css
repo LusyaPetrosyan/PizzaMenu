@@ -14,24 +14,14 @@
   display: inline;
   float: right;
 }
-.fa-arrow-left {
-  font-size: 50px;
-  color: blue;
-  width: 100px;
-  background-color: rgba(255, 255, 255, 1);
-}
+
 .ar-btn {
   border: none;
 }
 .me-btn {
   border: none;
 }
-.fa-bars {
-  font-size: 50px;
-  color: #000;
-  width: 100px;
-  background-color: rgba(255, 255, 255, 1);
-}
+
 .coner {
   background-image: url(../image/baketimg2.jpg);
   height: 100vh;
