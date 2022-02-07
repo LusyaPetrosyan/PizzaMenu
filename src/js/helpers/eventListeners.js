@@ -6,7 +6,7 @@ import router from "../routing";
 
 
 export const registerEventListeners = () => {
-    //aystex linelu e amragrel knopkayi clic ivente
+    
     document.querySelector('.btn-register').addEventListener("click", function(){
         let selectableTable = document.getElementById("table");
         console.log(selectableTable.value);
@@ -22,11 +22,8 @@ export const registerEventListeners = () => {
 };
 export const menuListEventListeners = () => {
     document.querySelectorAll('.cube').forEach(function(cube){
-        cube.addEventListener("click", function(event){
-            // console.log("worked");
-            // console.log(event);
-            // console.log(this);
-            // console.log(this.id);
+        cube.addEventListener("click", function(event){  
+            console.log("cube_event:",event);        
             router.redirect(`/menu/${this.id}`);
         })
     } )
@@ -38,9 +35,6 @@ export const menuListEventListeners = () => {
             router.redirect(`${hash}/${this.id}`);
         }))
 
-        // document.querySelector('.ingr').addEventListener("click", function(){
-        //     renderProductMenuPage();            
-        // })
         document.querySelector('.dropbtn').addEventListener("click",function(){
             toggleFilter();
             
@@ -52,7 +46,7 @@ export const menuListEventListeners = () => {
             document.getElementById("myDropdown").classList.toggle("show");
             
           }
-          
+          // կիրառել ֆիլտր ֆունկցիան
           function filterFunction() {
             var input, filter, ul, li, a, i,div,txtValue;
             input = document.getElementById("myInput");

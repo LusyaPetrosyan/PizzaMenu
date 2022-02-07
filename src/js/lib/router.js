@@ -22,8 +22,7 @@ class RouterEvent {
       let { context } = this;
   
       context.removeEventListener("hashchange", this.changeHandler);
-      context.addEventListener("hashchange", this.changeHandler);
-      context.addEventListener("load", this.changeHandler);
+      context.addEventListener("hashchange", this.changeHandler);    
     }
   
     async changeHandler() {

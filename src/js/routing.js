@@ -12,21 +12,21 @@ router.addRoute("/", function () {
   renderFirstPage();
 });
 
-router.addRoute("/menu", function () {
+router.addRoute("/menu", function (event) {
+
   renderHeaderPage();
   renderMenuList();
 });
 
-router.addRoute("/menu/:product", function (event) {
-  console.log("params=",event.params)
+router.addRoute("/menu/:product", function (event) {  
+
   renderMenuPage(event.params.product);
   });
 
 
-router.addRoute("/menu/:product/:item", function (event) {
-  console.log("params=",event.params)
-  // renderMenuPage(); 
+router.addRoute("/menu/:product/:item", function (event) {  
   renderProductMenuPage(event.params);  
+  
 });
 router.addRoute("/basket", function () {
   renderBasketPage();
