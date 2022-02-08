@@ -1,8 +1,10 @@
 import {setCookie, getCookie,deleteCookie} from "./localStorage";
+import {setStorage, getStorage} from "./localStorage";
 import{renderMenuList} from "../views/menuList";
 import{renderMenuPage} from "../views/menu";
 import { renderProductMenuPage } from "../views/productMenu";
 import router from "../routing";
+import { State } from "../helpers/model"
 
 
 export const registerEventListeners = () => {
@@ -79,11 +81,31 @@ export const menuListEventListeners = () => {
         document.getElementById("mySidenav").style.width = "0";
       }     
       document.querySelector(".tableId span").innerHTML = getCookie("table");
+ 
  };
       
- export const productMenuPageEventListeners = () => {
-     document.querySelector(".addBasket").addEventListener("click", function() {         
-        router.redirect("/basket");       
+ export const productMenuPageEventListeners = (data) => {
+     console.log("Data:=>", data)
+     document.querySelector(".addBasket").addEventListener("click", function() {   
+        console.log(document.getElementById('quantity').value)        
+        const quantity = document.getElementById('quantity').value;                   
+        const amount = data.price*quantity;        
+        let obj = {...data,
+        quantity: Number(quantity),
+        amount: amount        
+    }     
+       let found = State.basket.find(el => el.id == obj.id )
+       if(found){
+           found.quantity +=  Number(obj.quantity)
+           found.amount += obj.amount
+       } else {
+        State.basket.push(obj);
+       }
+       console.log("found:=", found)
+            
+            document.querySelector(".ordersQuantity").innerHTML = State.basket.length;
+            console.log("BasketData=",data);
+            router.redirect("/basket"); 
      })
  }
  
@@ -91,6 +113,7 @@ export const menuListEventListeners = () => {
     if (document.querySelector(".humburger_exit")) {
         document.querySelector(".humburger_exit").addEventListener("click", function() {
             deleteCookie("table");
+
             router.redirect("/");
         });
     }
@@ -106,6 +129,44 @@ export const menuListEventListeners = () => {
   
         });
       }
+ }
+
+ export const busketEventListener = () => {
+     document.querySelectorAll(".order-btn").forEach(item => item.addEventListener("click", function(event){
+       
+        let orderDivId = event.target.parentElement.parentElement.getAttribute("id");
+        debugger
+        let newBasket = State.basket.filter(item => { 
+            return item.id != orderDivId;   
+         }) 
+        
+        State.basket = newBasket; 
+        document.querySelectorAll('.coner .div1').forEach(function(element){
+            element.remove()
+            })
+           let sum = 0;
+        let basket = State.basket.reduce((acc, current) => {
+            sum += current.price * current.quantity;
+            console.log("State.basket:=", State.basket);
+          return (acc += `
+              <div class="div1" id="${current.id}">
+              <div class="nkar">
+              <img  class = "basketImg" src="${current.imagePath}" alt="${current.name}" width = "85px">
+              </div>
+              <div>${current.name}</div>
+              <div>Գին՝ ${current.price}</div>
+              <div>Քանակ՝ ${current.quantity} </div>
+              <div>Արժեքը՝ ${current.amount}</div>
+              <div class="ic  order-btn"><i class=" far fa-times-circle"></i></div>
+              </div> 
+          `);
+        }, "");
+
+        document.querySelector(".coner").insertAdjacentHTML("afterbegin", basket);
+        document.querySelector(".coner1 .div4 span").innerHTML = sum;
+        busketEventListener();
+        console.log("State.basket???", State.basket)
+    }))
  }
 
     // export const 

@@ -21,33 +21,35 @@ export const renderMenuPage = (productType) => {
     `
     document.querySelector(".container1").innerHTML = wrapper;    
    fetch(`${CONSTANTS.HOST}/product?url=get-all-by-product-type&product_type_id=${response[0].id}`)
-
     .then(function(response){
         return response.json();
     }) 
-    .then(function(data){        
+    .then(function(data){   
+        State.product = data;      
         console.log("productTypeResponse",data)      
           let x = data.map(function(params) {
             console.log("params",params)
-         return `<div class="card ingr card_${params.productTypeId}" id="${createSlugFromName(params.name)}">
+         let container = `<div class="card ingr card_${params.productTypeId}" id="${createSlugFromName(params.name)}">
          <div class="sec1">
-             <img src="./image/pizza3.png" alt="" class="imgpiz">
+             <img src="${params.imagePath}" alt="" class="imgpiz">
          </div>
          <hr class="hrst" style="border: 1px solid black;">
          <div class="sec2">
              ${params.name}<br>
-             1pcs:${params.currency}${params.price}
+             1pcs:${params.currency} ${params.price}
          </div>
          <hr class="hrst" style="border: 1px solid black;">
          <div class="sec3">
              <h3>Ingredients</h3>
-             <ol style="list-style-type: inherit;">
-                 <li>chesse</li>
-                 <li>tomato</li>
-                 <li>pepper</li>
-             </ol>
+             <ol style="list-style-type: inherit;">`;                     
+                 let ingrData =  params.ingredients.map(function(ingredient){
+                    return `<li>${ingredient.name}</li>`
+                });
+                container += ingrData.join("");
+            container +=` </ol>         
          </div>
          </div>`
+         return container;
      })
      document.querySelector(".cards").insertAdjacentHTML("afterbegin",x.join(""))
 

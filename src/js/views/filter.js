@@ -1,5 +1,8 @@
 // import {productMenuEventListeners} from "../helpers/eventListeners"
 import {humburgerEventListener} from "../helpers/eventListeners";
+import  CONSTANTS from "../helpers/constant";
+import {State} from "../helpers/model";
+
 export const renderFilterPage = () => {
   const filter = `        
       
@@ -11,6 +14,7 @@ export const renderFilterPage = () => {
      <div id="myDropdown" class="dropdown-content">
   <p>Filter</p>
   <input type="text" placeholder="Search.." id="myInput" >
+  
   <a href="#about">Sunk</a>
   <a href="#base">Popok</a>
   <a href="#blog">Pnduk</a>
@@ -24,7 +28,12 @@ export const renderFilterPage = () => {
       document.querySelector('body').insertAdjacentHTML("afterend",dropDownWidget);
 
   }
-//   productMenuEventListeners();
   humburgerEventListener();
 };
 
+{/* <ol style="list-style-type: inherit;">`;                     
+let ingrData =  params.ingredients.map(function(ingredient){
+   return `<li>${ingredient.name}</li>`
+});
+container += ingrData.join("");
+container +=` </ol>    */}

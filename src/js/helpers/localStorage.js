@@ -26,3 +26,11 @@ export const  deleteCookie=(name) => {
     'max-age': -1
   })
 }
+
+export const setStorage = () => {
+localStorage.setItem('basket', 'State.basket');
+}
+
+export const getStorage = () => {
+ localStorage.getItem('basket');
+}

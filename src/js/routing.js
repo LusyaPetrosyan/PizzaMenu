@@ -25,7 +25,8 @@ router.addRoute("/menu/:product", function (event) {
 
 
 router.addRoute("/menu/:product/:item", function (event) {  
-  renderProductMenuPage(event.params);  
+  renderProductMenuPage(event.params.item); 
+ 
   
 });
 router.addRoute("/basket", function () {

@@ -1,11 +1,16 @@
 import { sideNavEventListeners } from "../helpers/eventListeners";
+import { State } from "../helpers/model";
+
 export const renderHeaderPage = () => {
+  console.log("Basket:=", State.basket);
+  console.log("BasketLength:=", State.basket.length);
   const HeaderPage = `
    <div id="mySidenav" class="sidenav">
    <a href="javascript:void(0)" class="closebtn">&times;</a>
    <a class="tableId">Table Number <span></span></a>
    <a class="humburger_home">Home</a>   
-   <a class="humburger_basket">Basket</a>
+   <a class="humburger_basket">Basket <p class="ordersQuantity"></p></a>
+   
    <a class="humburger_exit">Exit</a>
  </div>
  

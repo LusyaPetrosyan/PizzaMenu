@@ -15,7 +15,7 @@ export const renderMenuList = () => {
    .then(function(response){
        return response.json()
    })
-   .then(function(data){
+   .then(function(data){       
        State.productTypes = data;
        console.log(State);
        let cub = data.map((el) => {
