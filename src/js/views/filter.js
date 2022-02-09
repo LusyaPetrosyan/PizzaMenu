@@ -15,12 +15,12 @@ export const renderFilterPage = () => {
   <p>Filter</p>
   <input type="text" placeholder="Search.." id="myInput" >
   
-  <a href="#about">Sunk</a>
-  <a href="#base">Popok</a>
-  <a href="#blog">Pnduk</a>
-  <a href="#contact">Mandarin</a>
-  <a href="#custom">Mayonez</a>
-  <a href="#support">Ketchup</a>  
+  <a href="">Sunk</a>
+  <a href="">Popok</a>
+  <a href="">Pnduk</a>
+  <a href="">Mandarin</a>
+  <a href="">Mayonez</a>
+  <a href="">Ketchup</a>  
 </div>`   
    
   document.querySelector(".filterMenu").innerHTML = filter;
@@ -30,10 +30,3 @@ export const renderFilterPage = () => {
   }
   humburgerEventListener();
 };
-
-{/* <ol style="list-style-type: inherit;">`;                     
-let ingrData =  params.ingredients.map(function(ingredient){
-   return `<li>${ingredient.name}</li>`
-});
-container += ingrData.join("");
-container +=` </ol>    */}

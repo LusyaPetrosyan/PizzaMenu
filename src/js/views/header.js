@@ -9,7 +9,7 @@ export const renderHeaderPage = () => {
    <a href="javascript:void(0)" class="closebtn">&times;</a>
    <a class="tableId">Table Number <span></span></a>
    <a class="humburger_home">Home</a>   
-   <a class="humburger_basket">Basket <p class="ordersQuantity"></p></a>
+   <a class="humburger_basket">Basket <span class="ordersQuantity"></span></a>
    
    <a class="humburger_exit">Exit</a>
  </div>

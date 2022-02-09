@@ -104,6 +104,7 @@ export const menuListEventListeners = () => {
        console.log("found:=", found)
             
             document.querySelector(".ordersQuantity").innerHTML = State.basket.length;
+            
             console.log("BasketData=",data);
             router.redirect("/basket"); 
      })
@@ -164,8 +165,8 @@ export const menuListEventListeners = () => {
 
         document.querySelector(".coner").insertAdjacentHTML("afterbegin", basket);
         document.querySelector(".coner1 .div4 span").innerHTML = sum;
-        busketEventListener();
-        console.log("State.basket???", State.basket)
+        document.querySelector(".ordersQuantity").innerHTML--;
+        busketEventListener();       
     }))
  }
 
