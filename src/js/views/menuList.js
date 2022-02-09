@@ -11,7 +11,7 @@ export const renderMenuList = () => {
         </div>
     </div>`
     document.querySelector(".container1").innerHTML = wrapper;
-   fetch(`${CONSTANTS.HOST}/productType?url=get-all&=`)
+   fetch(`${CONSTANTS.HOST}/product-type?url=get-all&=`)
    .then(function(response){
        return response.json()
    })
